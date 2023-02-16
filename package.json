@@ -1,0 +1,21 @@
+{
+  "name": "01-desafio",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlessandraMayumi/01-desafio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlessandraMayumi/01-desafio/issues"
+  },
+  "homepage": "https://github.com/AlessandraMayumi/01-desafio#readme"
+}
