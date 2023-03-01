@@ -5,7 +5,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "node --watch src/server.js"
+    "dev": "node --watch src/server.js",
+    "stream": "node src/streams/read-csv-and-post.js"
   },
   "repository": {
     "type": "git",
@@ -17,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/AlessandraMayumi/01-desafio/issues"
   },
-  "homepage": "https://github.com/AlessandraMayumi/01-desafio#readme"
+  "homepage": "https://github.com/AlessandraMayumi/01-desafio#readme",
+  "dependencies": {
+    "csv": "^6.2.7"
+  }
 }
