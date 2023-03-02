@@ -43,22 +43,25 @@ export class Database {
         return data;
     }
 
-    update(table, id, data) {
-        const rowIndex = this.#database[table].findIndex(row => row.id === id);
-        if (rowIndex > -1) {
-            console.log(this.#database[table][rowIndex])
-            const info = this.#database[table][rowIndex];
-            this.#database[table][rowIndex] = { ...info, ...data };
-            this.#persist();
-        }
-        return data;
+    update(table, rowIndex, data) {
+        // const rowIndex = this.#database[table].findIndex(row => row.id === id);
+        // if (rowIndex > -1) {
+        const info = this.#database[table][rowIndex];
+        this.#database[table][rowIndex] = { ...info, ...data };
+        this.#persist();
+        // }
+        return this.#database[table][rowIndex];
     }
 
-    delete(table, id) {
-        const rowIndex = this.#database[table].findIndex(row => row.id === id);
-        if (rowIndex > -1) {
-            this.#database[table].splice(rowIndex, 1);
-            this.#persist();
-        }
+    delete(table, rowIndex) {
+        // const rowIndex = this.#database[table].findIndex(row => row.id === id);
+        // if (rowIndex > -1) {
+        this.#database[table].splice(rowIndex, 1);
+        this.#persist();
+        // }
+    }
+
+    verifyId(table, id) {
+        return this.#database[table].findIndex(row => row.id === id);
     }
 }
